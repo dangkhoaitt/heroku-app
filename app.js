@@ -19,7 +19,7 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
-app.get('/')
+app.get("/", (req, res) => res.send("build/index.html"));
 app.listen(3000, () => {
   console.log("app is listen port >>", 3000);
 });
