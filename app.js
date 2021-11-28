@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app
@@ -7,7 +8,7 @@ app
   .get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   })
-  .listen(3000, () => {
+  .listen(PORT, () => {
     console.log("app is listen port >>", 3000);
   });
 
